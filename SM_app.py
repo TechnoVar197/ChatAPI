@@ -25,10 +25,12 @@ model_choice = st.selectbox("Choose a model", ["GPT-4", "GPT-4o","Groq LLama-3.1
 prompt = st.text_area("Enter your prompt here:")
 
 # Slider for max tokens
-max_tokens = st.slider("Max tokens:", min_value=10, max_value=1000, value=150)
+max_tokens = 1000
+#st.slider("Max tokens:", min_value=10, max_value=1000, value=150)
 
 # Slider for temperature
-temperature = st.slider("Temperature:", min_value=0.0, max_value=1.0, value=0.02)
+temperature = 0.01
+#st.slider("Temperature:", min_value=0.0, max_value=1.0, value=0.02)
 
 if st.button("Generate"):
     if prompt:
